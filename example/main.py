@@ -5,13 +5,13 @@ from anomaly import detect, forecasts, errors, thresholds, datagen
 
 def main():
     # Generate the data
-    values, anomaly_labels = datagen.cyclic_bump()
+    values, anomaly_labels = datagen.cyclic_sagged()
 
     # Run the anomaly detection algorithm
     analysis = detect_batch(values=values, labels=anomaly_labels)
 
     # Plot the results
-    plot_analysis(values, anomaly_labels, analysis, plot_name="cyclic_bump")
+    plot_analysis(values, anomaly_labels, analysis, plot_name="cyclic_sagged")
 
 
 def detect_batch(values, labels):
@@ -19,8 +19,8 @@ def detect_batch(values, labels):
         seasons_primary=158,
         seasons_secondary=1106,
         forecast_alpha=0.2,
-        forecast_beta=0.0,
-        forecast_gamma=0.2,
+        forecast_beta=1.0,
+        forecast_gamma=1.0,
         additive_trend=True)
 
     analysis = detect.Analysis()
