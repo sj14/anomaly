@@ -20,11 +20,11 @@ anomalies (datagen.py).
 The example folder shows how to use the framework and how to plot the results.
 The following three plots were created based on the seasonal triple exponential smoothing algorithm
 
-[[https://github.com/sj14/anomaly/blob/master/output/png/cyclic_bump.png|alt=cyclic_bump]]
+![cyclic_bump](example/output/png/cyclic_bump.png)
 
-[[https://github.com/sj14/anomaly/blob/master/output/png/cyclic_sagged.png|alt=cyclic_sagged]]
+![cyclic_sagged](example/output/png/cyclic_sagged.png)
 
-[[https://github.com/sj14/anomaly/blob/master/output/png/grow_with_error.png|alt=grow_with_error]]
+![grow_with_error](example/output/png/grow_with_error.png)
 
 
 # TODO
