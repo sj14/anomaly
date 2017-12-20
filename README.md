@@ -12,7 +12,7 @@ Some of the implemented algorithms are:
 - naive
 - seasonal naive
 - single/double/triple exponential smoothing
-- an own ensemble of seasonal naive and exponential smoothing (seasonal exponential smoothing)
+- an own promising combination of seasonal naive and exponential smoothing (seasonal exponential smoothing)
 
 To easily evaluate the algorithm, the package comes with a function to simply create own test data with injected
 anomalies (datagen.py).
@@ -22,7 +22,7 @@ anomalies (datagen.py).
 The example folder shows how to use the framework and how to plot the results.
 The following three plots were created based on the seasonal triple exponential smoothing forecast and a 3-sigma threshold.
 The grey line indicates the raw value, the dark blue line the forecast, and the light blue lines the allowed range of normal values.
-Green dots are true positive anomalies and red dots indicate fale positives.
+The green dots indicate true positive anomalies and red dots indicate false positives detections.
 
 ![cyclic_bump](example/output/png/cyclic_bump.png)
 
