@@ -1,6 +1,6 @@
 import unittest
 
-from anomaly.forecasts import Naive, MovingAverageWindow, SingleExponentialSmoothing2Good, DoubleExponentialSmoothing2Good, TripleExponentialSmoothing2
+from anomaly.forecasts import Naive, MovingAverageWindow, SingleExponentialSmoothing, DoubleExponentialSmoothing, TripleExponentialSmoothing
 
 
 class TestForecasts(unittest.TestCase):
@@ -23,7 +23,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [565.2204177005497] # not exactly 565.2, probably because of more decimal values and rounding
 
-        e = SingleExponentialSmoothing2Good(alpha=0.3)
+        e = SingleExponentialSmoothing(alpha=0.3)
         for i in range(1, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
@@ -36,7 +36,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [507.4699999999999] # not exactly 565.2, probably because of more decimal values and rounding
 
-        e = SingleExponentialSmoothing2Good(alpha=0.3)
+        e = SingleExponentialSmoothing(alpha=0.3)
         for i in range(0, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
@@ -52,7 +52,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [565.2204177005497] # not exactly 565.2, because of more decimal values and rounding
 
-        e = SingleExponentialSmoothing2Good(alpha=0.3)
+        e = SingleExponentialSmoothing(alpha=0.3)
         for i in range(1, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
@@ -66,7 +66,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [507.4699999999999] # not exactly 565.2, because of more decimal values and rounding
 
-        e = SingleExponentialSmoothing2Good(alpha=0.3)
+        e = SingleExponentialSmoothing(alpha=0.3)
         for i in range(0, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
@@ -80,7 +80,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [565.2204177005497] # not exactly 565.2, probably because of more decimal values and rounding
 
-        e = DoubleExponentialSmoothing2Good(alpha=0.3, beta=0.0)
+        e = DoubleExponentialSmoothing(alpha=0.3, beta=0.0)
         for i in range(1, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
@@ -95,7 +95,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [570.6394422451164] # not exactly 565.2, probably because of more decimal values and rounding
 
-        e = DoubleExponentialSmoothing2Good(alpha=0.3, beta=0.1)
+        e = DoubleExponentialSmoothing(alpha=0.3, beta=0.1)
         for i in range(1, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
@@ -128,7 +128,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [565.2204177005497] # not exactly 565.2, probably because of more decimal values and rounding
 
-        e = TripleExponentialSmoothing2(seasons=0, alpha=0.3, beta=0.0, gamma=0.0)
+        e = TripleExponentialSmoothing(seasons=0, alpha=0.3, beta=0.0, gamma=0.0)
         for i in range(1, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
@@ -144,7 +144,7 @@ class TestForecasts(unittest.TestCase):
         #        544.1, 544.5, 547.1, 557.6, 565.2]
         want = [570.6394422451164] # not exactly 565.2, probably because of more decimal values and rounding
 
-        e = TripleExponentialSmoothing2(seasons=0, alpha=0.3, beta=0.0, gamma=0.1)
+        e = TripleExponentialSmoothing(seasons=0, alpha=0.3, beta=0.0, gamma=0.1)
         for i in range(1, len(values)-1):
             e.calc_forecasts(values[i])
         result = e.calc_forecasts(values[-1])
