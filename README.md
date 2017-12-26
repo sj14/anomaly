@@ -3,7 +3,7 @@
 A simple Python framework to compare time series anomaly detection algorithms. Special interest is put into algorithms
 which work in real-time and with continuous data streams.
 
-The framework allows to exchange different function of the detection algorithm:
+The framework allows to exchange different functions of the detection algorithm:
 
 - The forecast function (e.g. moving average)
 - The error function (e.g. absolute error or the RMSE)
@@ -20,7 +20,6 @@ Some of the implemented algorithms are:
 To easily evaluate the algorithm, the package comes with a function to simply create own test data with injected
 anomalies (datagen.py).
 
-
 ## Example Plots
 
 The example folder shows how to use the framework and how to plot the results.
@@ -33,7 +32,6 @@ The green dots indicate true positive anomalies and red dots indicate false posi
 ![cyclic_sagged](example/output/png/cyclic_sagged.png)
 
 ![grow_with_error](example/output/png/grow_with_error.png)
-
 
 ## TODO
 
