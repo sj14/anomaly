@@ -27,11 +27,11 @@ The following three plots were created based on the seasonal triple exponential 
 The grey line indicates the raw value, the dark blue line the forecast, and the light blue lines the allowed range of normal values.
 The green dots indicate true positive anomalies and red dots indicate false positive detections.
 
-![cyclic_bump](example/output/png/cyclic_bump.png)
+![cyclic_bump](output/png/cyclic_bump.png)
 
-![cyclic_sagged](example/output/png/cyclic_sagged.png)
+![cyclic_sagged](output/png/cyclic_sagged.png)
 
-![grow_with_error](example/output/png/grow_with_error.png)
+![grow_with_error](output/png/grow_with_error.png)
 
 ## TODO
 
